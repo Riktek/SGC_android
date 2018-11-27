@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSplash"
+    tools:context=".Activity.nuevoAutoActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/corner_background"
+            android:elevation="15dp"
+            android:padding="15dp">
+
+            <EditText
+                android:id="@+id/editEscala"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="3dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editFabricante"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="3dp"
+                android:layout_below="@+id/editEscala"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editAnoFabricacion"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="3dp"
+                android:layout_below="@+id/editFabricante"
+                android:ems="10"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editModelo"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="3dp"
+                android:layout_below="@+id/editAnoFabricacion"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editAno"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="3dp"
+                android:layout_below="@+id/editModelo"
+                android:ems="10"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editColor"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="3dp"
+                android:layout_below="@+id/editAno"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="3dp"
+                android:layout_below="@+id/editColor"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <Spinner
+                android:id="@+id/editCaja"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@+id/editEstado"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="3dp"
+                android:layout_below="@+id/editEstado"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editEscala"
+                android:text="Escala" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editFabricante"
+                android:layout_alignStart="@+id/textView8"
+                android:text="Fabricante" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editAnoFabricacion"
+                android:layout_alignStart="@+id/textView8"
+                android:text="Año de \nFabricación" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editModelo"
+                android:layout_alignStart="@+id/textView8"
+                android:text="Modelo" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editAno"
+                android:layout_alignStart="@+id/textView8"
+                android:text="Año" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editColor"
+                android:layout_alignStart="@+id/textView8"
+                android:text="Color" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editEstado"
+                android:layout_alignStart="@+id/textView8"
+                android:text="Estado" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/editCaja"
+                android:layout_alignStart="@+id/textView8"
+                android:layout_marginBottom="10dp"
+                android:text="Caja / Blister" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView16"
+                android:layout_marginTop="40dp"
+                android:layout_alignStart="@+id/textView8"
+                android:text="Foto" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/editCaja"
+                android:layout_alignStart="@+id/editCaja"
+                app:srcCompat="@android:drawable/ic_menu_camera" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:layout_alignStart="@+id/imageView2"
+                android:layout_marginTop="15dp"
+                android:text="Faltante" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkBox2"
+                android:layout_marginTop="30dp"
+                android:layout_alignStart="@+id/textView17"
+                android:text="Cancelar" />
+
+            <Button
+                android:id="@+id/btnAgregar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkBox2"
+                android:layout_marginTop="30dp"
+                android:layout_alignEnd="@+id/editCaja"
+                android:text="Agregar" />
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

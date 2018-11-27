@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.root.sgc_dbflow">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:authorities="${applicationId}.share"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".Assets.splash_screen"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <activity android:name=".Activity.MainActivity">
+        </activity>
+        <activity android:name=".Activity.coleccionesActivity" />
+        <activity android:name=".Activity.coleccionNuevaActivity" />
+        <activity android:name=".Activity.galeriaAutosActivity" />
+        <activity android:name=".Activity.listaAutosActivity" />
+        <activity android:name=".Activity.loginActivity" />
+        <activity android:name=".Activity.nuevoAutoActivity" />
+        <activity android:name=".Activity.nuevoItemAlbumActivity" />
+        <activity android:name=".Activity.registroActivity"></activity>
+    </application>
+
+</manifest>
