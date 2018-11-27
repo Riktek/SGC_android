@@ -34,6 +34,10 @@ public class autoescala extends BaseModel {
     private String empaque;
     @Column
     private int id_coleccion;
+    @Column
+    private int id_caja;
+    @Column
+    private String estado;
 
 
     public static List<autoescala> getListByColeccion(int id_coleccion){
@@ -162,5 +166,21 @@ public class autoescala extends BaseModel {
 
     public void setId_coleccion(int id_coleccion) {
         this.id_coleccion = id_coleccion;
+    }
+
+    public int getId_caja() {
+        return id_caja;
+    }
+
+    public void setId_caja(int id_caja) {
+        this.id_caja = id_caja;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 }

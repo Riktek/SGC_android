@@ -43,7 +43,6 @@ public class nuevoAutoActivity extends AppCompatActivity {
     private EditText editFabricante;
     private EditText editAnoFabricacion;
     private EditText editModelo;
-    private EditText editAno;
     private EditText editColor;
     private EditText editEstado;
     private Spinner editCaja;
@@ -83,7 +82,6 @@ public class nuevoAutoActivity extends AppCompatActivity {
         editFabricante = findViewById(R.id.editFabricante);
         editAnoFabricacion = findViewById(R.id.editAnoFabricacion);
         editModelo = findViewById(R.id.editModelo);
-        editAno = findViewById(R.id.editAno);
         editColor = findViewById(R.id.editColor);
         editEstado = findViewById(R.id.editEstado);
         editCaja = findViewById(R.id.editCaja);
@@ -100,6 +98,8 @@ public class nuevoAutoActivity extends AppCompatActivity {
         btnCancelar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(nuevoAutoActivity.this, listaAutosActivity.class);
+                startActivity(intent);
                 finish();
             }
         });
@@ -108,6 +108,8 @@ public class nuevoAutoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 guardarAuto();
+                Intent intent = new Intent(nuevoAutoActivity.this, listaAutosActivity.class);
+                startActivity(intent);
                 finish();
             }
         });
@@ -137,6 +139,11 @@ public class nuevoAutoActivity extends AppCompatActivity {
         tmp.setFaltante(checkFaltante.isChecked());
         tmp.setId_coleccion(DataManager.ID_COLECCION);
         tmp.setFoto(uri);
+        tmp.setEstado(editEstado.getText().toString());
+        tmp.setId_caja(editCaja.getSelectedItemPosition());
+
+        if(update)
+            tmp.setAutoescalaid(id_auto);
 
         tmp.save();
 
@@ -150,16 +157,16 @@ public class nuevoAutoActivity extends AppCompatActivity {
 
             editEscala.setText(tmp.getEscala());
             editFabricante.setText(tmp.getFabricante());
-            editAno.setText(Integer.toString(tmp.getAnio()));
             editAnoFabricacion.setText(Integer.toString(tmp.getAnio()));
             editModelo.setText(tmp.getModelo());
             editColor.setText(tmp.getColor());
             checkFaltante.setChecked(tmp.isFaltante());
-            //editEstado.setText(tmp.get);
+            editEstado.setText(tmp.getEstado());
+            editCaja.setSelection(tmp.getId_caja());
 
             uri = tmp.getFoto();
 
-            if (tmp.getFoto() != ""){
+            if (!tmp.getFoto().equals("")){
                 Picasso.with(this).load(tmp.getFoto()).fit().centerInside().into(imgCamara);
 
             }

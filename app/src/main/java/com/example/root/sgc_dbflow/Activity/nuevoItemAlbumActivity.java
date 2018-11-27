@@ -60,7 +60,7 @@ public class nuevoItemAlbumActivity extends AppCompatActivity {
 
         if (tamListaNomal > 0){
 
-            for (int i = 0; i < tamListaNomal; i++){
+            for (int i = 0; i <= tamListaNomal; i++){
 
                 listaNomal.add(String.valueOf(countNormal));
                 countNormal++;
@@ -73,7 +73,7 @@ public class nuevoItemAlbumActivity extends AppCompatActivity {
 
 
         if (tamListaEspecial > 0){
-            for (int i = 0; i < tamListaEspecial; i++){
+            for (int i = 0; i <= tamListaEspecial; i++){
 
                 listaEspecial.add(String.valueOf(counEspecial));
                 counEspecial++;

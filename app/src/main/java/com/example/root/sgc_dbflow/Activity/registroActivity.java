@@ -91,6 +91,7 @@ public class registroActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.dismiss();
+                finish();
             }
         });
 
