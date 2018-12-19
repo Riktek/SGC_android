@@ -82,8 +82,6 @@ public class coleccionesActivity extends AppCompatActivity {
 
                 startActivity(intent);
 
-
-
             }
         });
 
